@@ -2,12 +2,194 @@ aid: msci
 url: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/apis.yml
 name: MSCI
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-description: 'Fortune 1000 company MSCI. Public API documentation has not yet been catalogued in the API Evangelist network.'
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/msci.png
+description: >-
+  MSCI is a leading provider of critical decision support tools and services for
+  the global investment community, publishing indexes, ESG and climate ratings,
+  risk analytics, and real estate and private asset data. The MSCI Developer
+  Community at developer.msci.com catalogs thirty-plus REST APIs spanning index
+  performance and constituents, ESG data and reports, sustainability and
+  climate on-demand data, risk and instrument analytics, portfolio optimization,
+  real estate performance, and private capital metrics, alongside an official
+  Python SDK and the MSCI Connector, a Model Context Protocol server listed in
+  the Claude connector directory.
 created: '2026-05-05'
-modified: '2026-05-05'
+modified: '2026-07-22'
 specificationVersion: '0.19'
+tags:
+  - Financial Data
+  - Indexes
+  - ESG
+  - Climate
+  - Risk Analytics
+  - Real Estate
+  - Private Assets
+  - Investing
+maintainers:
+  - FN: MSCI Client Service
+    email: ClientService@msci.com
+apis:
+  - name: MSCI Index API
+    description: >-
+      REST APIs for MSCI index data including index levels and performance,
+      constituents, security master, dividends, and corporate events for MSCI
+      indexes across supported variants and currencies.
+    humanURL: https://developer.msci.com/apis/index-api
+    baseURL: https://api.msci.com/index
+    tags:
+      - Indexes
+      - Performance
+      - Constituents
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/index-api
+  - name: MSCI Real Time Index API
+    description: >-
+      Real-time index and factor data API delivering intraday index levels for
+      MSCI indexes.
+    humanURL: https://developer.msci.com/apis/index-rt-api-dev-index-rt-factor-api-v1-0
+    baseURL: https://api2.msci.com
+    tags:
+      - Indexes
+      - Real Time
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/index-rt-api-dev-index-rt-factor-api-v1-0
+  - name: MSCI ESG Data API
+    description: >-
+      Retrieve current day and historical ESG data for entitled issuers,
+      providing access to thousands of ESG data points including MSCI ESG
+      Ratings and underlying raw data.
+    humanURL: https://developer.msci.com/apis/esg-data-api-v3-0
+    baseURL: https://api2.msci.com/esg/data/v3.0
+    tags:
+      - ESG
+      - Ratings
+      - Issuers
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/esg-data-api-v3-0
+  - name: MSCI ESG Report API
+    description: >-
+      Access ESG documents and reports for companies, funds, and industries as
+      PDF and HTML documents.
+    humanURL: https://developer.msci.com/apis/esg-report-api-v2-0
+    baseURL: https://api2.msci.com
+    tags:
+      - ESG
+      - Reports
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/esg-report-api-v2-0
+  - name: MSCI Sustainability and Climate On-Demand API
+    description: >-
+      On-demand access to MSCI sustainability and climate datasets, including
+      climate metrics for portfolio and issuer analysis.
+    humanURL: https://developer.msci.com/apis/sustainability-climate-on-demand-api
+    baseURL: https://api2.msci.com
+    tags:
+      - Sustainability
+      - Climate
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/sustainability-climate-on-demand-api
+  - name: MSCI Risk Analytics API
+    description: >-
+      RiskMetrics RiskManager-based analytics APIs for risk measurement,
+      stress testing, and exposure analysis across portfolios.
+    humanURL: https://developer.msci.com/apis/risk-analytics
+    baseURL: https://api2.msci.com
+    tags:
+      - Risk
+      - Analytics
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/risk-analytics
+  - name: MSCI Instrument Analytics API
+    description: >-
+      Instrument-level analytics API for pricing and risk measures across asset
+      classes using MSCI models.
+    humanURL: https://developer.msci.com/apis/instrument-analytics-api
+    baseURL: https://api2.msci.com
+    tags:
+      - Analytics
+      - Instruments
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/instrument-analytics-api
+  - name: MSCI Optimization Service API
+    description: >-
+      Portfolio optimization service from MSCI Quantitative Investment
+      Solutions supporting portfolio and tax-lot upload in JSON and tax-aware
+      optimizations; accessible through the official MSCI Python SDK.
+    humanURL: https://developer.msci.com/apis/msci-optimization-service
+    baseURL: https://api2.msci.com
+    tags:
+      - Optimization
+      - Portfolios
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/msci-optimization-service
+      - type: SDK
+        url: https://pypi.org/project/msci-sdk/
+  - name: MSCI Real Estate Performance and Risk Data API
+    description: >-
+      Real estate index and market data API covering property fund and asset
+      performance and risk data across global markets.
+    humanURL: https://developer.msci.com/apis/real-estate-performance-risk-data-api
+    baseURL: https://api2.msci.com
+    tags:
+      - Real Estate
+      - Performance
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/real-estate-performance-risk-data-api
+  - name: MSCI Private Asset and Deal Metrics API
+    description: >-
+      Private capital data API providing asset and deal-level metrics for
+      private asset funds and portfolios.
+    humanURL: https://developer.msci.com/apis/private-asset-and-deal-metrics-api
+    baseURL: https://api2.msci.com
+    tags:
+      - Private Assets
+      - Metrics
+    properties:
+      - type: Documentation
+        url: https://developer.msci.com/apis/private-asset-and-deal-metrics-api
 common:
   - type: LinkedIn
     url: https://www.linkedin.com/company/msci-inc
-apis: []
+  - type: Website
+    url: https://www.msci.com
+  - type: DeveloperPortal
+    url: https://developer.msci.com
+  - type: Documentation
+    url: https://developer.msci.com/apis
+  - type: APIReference
+    url: https://developer.msci.com/apis
+  - type: Support
+    url: https://support.msci.com
+  - type: Login
+    url: https://one.msci.com
+  - type: TermsOfService
+    url: https://www.msci.com/terms-of-use
+  - type: PrivacyPolicy
+    url: https://www.msci.com/privacy-pledge
+  - type: Packages
+    url: packages/msci-packages.yml
+  - type: SDKs
+    url: packages/msci-packages.yml
+  - type: WellKnown
+    url: well-known/msci-well-known.yml
+  - type: MCPServer
+    url: mcp/msci-mcp.yml
+  - type: LLMsTxt
+    url: llms/msci-llms.txt
+  - type: Conformance
+    url: conformance/msci-conformance.yml
+  - type: Authentication
+    url: authentication/msci-authentication.yml
+  - type: Lifecycle
+    url: lifecycle/msci-lifecycle.yml
+  - type: DomainSecurity
+    url: security/msci-domain-security.yml

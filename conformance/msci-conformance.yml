@@ -1,0 +1,51 @@
+generated: '2026-07-22'
+method: searched
+source: https://accounts.msci.com/.well-known/openid-configuration
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      Live OAuth 2.0 authorization server at accounts.msci.com; API gateway
+      returns 401 bearer challenges; authorization-code, device and token
+      revocation endpoints published.
+  - id: oidc
+    conforms: true
+    evidence: >-
+      OpenID Connect discovery document live at
+      https://accounts.msci.com/.well-known/openid-configuration with
+      jwks_uri, userinfo endpoint, and id_token signing algs (HS256/RS256/PS256).
+  - id: rfc8414-authorization-server-metadata
+    conforms: true
+    evidence: >-
+      RFC 8414 metadata published at api2.msci.com, mcp.msci.com and
+      accounts.msci.com /.well-known/oauth-authorization-server.
+  - id: pkce
+    conforms: true
+    evidence: code_challenge_methods_supported includes S256 and plain.
+  - id: rfc8628-device-authorization-grant
+    conforms: true
+    evidence: device_authorization_endpoint https://accounts.msci.com/oauth/device/code.
+  - id: ciba-backchannel-authentication
+    conforms: true
+    evidence: >-
+      backchannel_authentication_endpoint https://accounts.msci.com/bc-authorize
+      with poll token delivery mode.
+  - id: private-key-jwt-client-auth
+    conforms: true
+    evidence: token_endpoint_auth_methods_supported includes private_key_jwt (RS256/RS384/PS256).
+  - id: oidc-backchannel-logout
+    conforms: true
+    evidence: backchannel_logout_supported and backchannel_logout_session_supported are true.
+  - id: mcp-model-context-protocol
+    conforms: true
+    evidence: >-
+      MSCI Connector MCP server hosted at mcp.msci.com, listed in the Claude
+      connector directory, documented in the MSCI Connector user guide (May 2026).
+  - id: openapi
+    conforms: false
+    evidence: no publicly retrievable OpenAPI/Swagger documents; API reference pages are login-gated.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      anonymous gateway errors return a plain {statusCode, message} JSON
+      envelope, not application/problem+json.

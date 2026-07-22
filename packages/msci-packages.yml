@@ -1,0 +1,40 @@
+generated: '2026-07-22'
+method: searched
+source: https://pypi.org/project/msci-sdk/
+packages:
+  - language: python
+    registry: pypi
+    name: msci.sdk
+    url: https://pypi.org/project/msci-sdk/
+    install: pip install msci-sdk
+    official: true
+    version: 1.34.0
+    releases: 35
+    author: MSCI (msci_sdk@msci.com)
+    license: MSCI
+    requires_python: '>=3.8'
+    description: >-
+      Official MSCI Python SDK providing easy access to MSCI APIs, content and
+      data; the current version provides access to the MSCI Optimization
+      Service API (MSCI Quantitative Investment Solutions), including portfolio
+      and tax-lot upload in JSON and tax-aware optimization.
+    docs: https://developer.msci.com/code-libraries/msci-python-sdk
+portal_distributed:
+  - name: MSCI RMWS Package
+    url: https://developer.msci.com/code-libraries/msci-rmws-package
+    note: RiskManager Web Service client package distributed through the MSCI Developer Community portal (login required), not a public registry.
+  - name: QIS Tax Optimization with MSCI SDK Python Notebooks
+    url: https://developer.msci.com/code-libraries/qis-tax-optimization-with-msci-sdk-python-notebooks
+  - name: Models via Snowflake Python Notebook
+    url: https://developer.msci.com/code-libraries/models-via-snowflake-python-notebook
+  - name: RCA Data via Snowflake Python Notebook
+    url: https://developer.msci.com/code-libraries/rca-data-via-snowflake-python-notebook
+  - name: Geospatial Asset Intelligence Data via Snowflake Python Notebook
+    url: https://developer.msci.com/code-libraries/geospatial-asset-intelligence-data-via-snowflake-python-notebook
+  - name: Volatility Regime Adjustment Multipliers Notebook
+    url: https://developer.msci.com/code-libraries/volatility-regime-adjustment-multipliers-notebook
+notes: >-
+  npm, Maven Central, NuGet, RubyGems, Packagist, crates.io and pkg.go.dev were
+  searched; no first-party MSCI client libraries were found on those
+  registries. The PyPI package "MSCI" (proteomics) is unrelated third-party
+  software.

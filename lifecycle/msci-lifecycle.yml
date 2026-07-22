@@ -1,0 +1,30 @@
+generated: '2026-07-22'
+method: derived
+source: https://developer.msci.com/content/sitemap.txt
+versioning:
+  scheme: uri-path
+  evidence: >-
+    API catalog entries and live endpoints carry explicit versions in the URI
+    path (esg/data/v3.0, controltowerservice/v2.0, ESG Report API v2.0, Fixed
+    Basket Index API v2.1, Dynamic Basket Index API v2.0, Factor Insights
+    v3.1, Instant Calculation Service v1.0, Security Analyzer v1.2), with
+    multiple majors of the same API published side by side (ESG Data API v2.0
+    on api.msci.com and v3.0 on api2.msci.com both live).
+environments:
+  - name: production
+    hosts: [api.msci.com, api2.msci.com]
+  - name: uat
+    hosts: [uat-api2.msci.com]
+    evidence: referenced in the developer portal application configuration
+  - name: test
+    hosts: [test-api2.msci.com]
+    evidence: referenced in the developer portal application configuration
+status_page: null
+deprecation:
+  policy_url: null
+  note: no public deprecation policy or Sunset header documentation found; API detail pages are login-gated
+sla: null
+notes: >-
+  status.msci.com does not resolve; no public status page was found. Lifecycle
+  detail beyond URI versioning and the published environment tiers requires an
+  MSCI client login.

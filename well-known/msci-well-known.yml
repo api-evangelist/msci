@@ -1,0 +1,59 @@
+generated: '2026-07-22'
+method: searched
+note: >-
+  Probed /.well-known/ on www.msci.com, developer.msci.com, api2.msci.com,
+  accounts.msci.com, and mcp.msci.com. accounts.msci.com is MSCI's OAuth 2.0 /
+  OIDC authorization server; api2.msci.com and mcp.msci.com publish RFC 8414
+  authorization-server metadata that routes authorization through
+  https://mcp.msci.com/oauth/authorize. www.msci.com sits behind bot protection
+  (reCAPTCHA challenge served to anonymous clients), so its well-known paths
+  could not be verified; developer.msci.com is a SPA that returns its HTML
+  shell for every path (recorded as not-published).
+hosts:
+  - host: https://accounts.msci.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: msci-accounts-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: msci-accounts-oauth-authorization-server.json
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://api2.msci.com
+    documents:
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: msci-api2-oauth-authorization-server.json
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://mcp.msci.com
+    documents:
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: msci-mcp-oauth-authorization-server.json
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+  - host: https://www.msci.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        note: bot-protection challenge page returned; real document not retrievable anonymously
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: bot-protection challenge page returned; real document not retrievable anonymously
+  - host: https://developer.msci.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        note: SPA HTML shell returned for all paths; no real well-known documents published

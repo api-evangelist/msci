@@ -1,0 +1,52 @@
+# MSCI
+
+> MSCI provides critical decision support tools and services for the global investment community: indexes, ESG and climate ratings, risk analytics, real estate and private asset data. The MSCI Developer Community (developer.msci.com) catalogs thirty-plus REST APIs, an official Python SDK, and the MSCI Connector — a Model Context Protocol server listed in the Claude connector directory. API access requires MSCI client credentials (accounts.msci.com OAuth 2.0 / OIDC); data is entitlement-controlled per MSCI license.
+
+## APIs
+
+- [MSCI Index API](https://developer.msci.com/apis/index-api): Index levels, performance, constituents, security master, dividends, and corporate events
+- [MSCI Real Time Index API](https://developer.msci.com/apis/index-rt-api-dev-index-rt-factor-api-v1-0): Intraday index and factor data
+- [MSCI ESG Data API](https://developer.msci.com/apis/esg-data-api-v3-0): Current and historical ESG data points, ratings, and raw data for entitled issuers
+- [MSCI ESG Report API](https://developer.msci.com/apis/esg-report-api-v2-0): ESG documents and reports for companies, funds, and industries (PDF/HTML)
+- [Sustainability and Climate On-Demand API](https://developer.msci.com/apis/sustainability-climate-on-demand-api): Sustainability and climate datasets on demand
+- [MSCI Risk Analytics API](https://developer.msci.com/apis/risk-analytics): RiskMetrics RiskManager risk measurement and stress testing
+- [MSCI Instrument Analytics API](https://developer.msci.com/apis/instrument-analytics-api): Instrument-level pricing and risk analytics
+- [MSCI Optimization Service](https://developer.msci.com/apis/msci-optimization-service): Portfolio and tax-aware optimization (QIS), accessible via the MSCI Python SDK
+- [Real Estate Performance and Risk Data API](https://developer.msci.com/apis/real-estate-performance-risk-data-api): Global real estate performance and risk data
+- [Real Estate Data Upload API](https://developer.msci.com/apis/real-estate-data-upload-api): Upload real estate data to MSCI
+- [Private Asset and Deal Metrics API](https://developer.msci.com/apis/private-asset-and-deal-metrics-api): Private capital asset and deal metrics
+- [BarraOne Developers Toolkit Interactive (BDTI)](https://developer.msci.com/apis/barraone-developers-toolkit-interactive-bdti): BarraOne portfolio analytics toolkit
+- [Security Analyzer](https://developer.msci.com/apis/security-analyzer-v1-2): Security-level analysis
+- [MSCI Portfolio Storage](https://developer.msci.com/apis/msci-portfolio-storage): Portfolio storage service
+- [Aggregation Service](https://developer.msci.com/apis/aggregation-service): Aggregation of analytics results
+- [MSCI Instant Calculation Service](https://developer.msci.com/apis/msci-instant-calculation-service-v1-0): Instant analytics calculations
+- [MAC Custom Covariance API](https://developer.msci.com/apis/mac-custom-covariance-api): Multi-asset-class custom covariance matrices
+- [Factor Insights](https://developer.msci.com/apis/factor-insights-v3-1): Factor insights and analytics
+- [Factor Crowding Model](https://developer.msci.com/apis/factor-crowding-model-v3): Factor crowding measures
+- [Peer Similarity Scores](https://developer.msci.com/apis/peer-similarity-scores): Peer similarity scoring
+- [Fixed Basket Index API](https://developer.msci.com/apis/fixed-basket-index-api-v2-1): Fixed basket index management
+- [Dynamic Basket Index API](https://developer.msci.com/apis/dynamic-basket-index-api-v2-0): Dynamic basket index management
+- [SignalLab](https://developer.msci.com/apis/signallab): Investment signals laboratory
+- [FileService](https://developer.msci.com/apis/fileservice-msci-com): File delivery service
+- [Real Estate TPM Client API](https://developer.msci.com/apis/realestate-tpm-client-api-v1-0): Total Plan Manager real estate client API
+- [Private Capital DealCloud API](https://developer.msci.com/apis/pc-api-dev-dealcloud-v1-0): DealCloud private capital integration
+
+## MCP
+
+- [MSCI Connector user guide](https://www.msci.com/downloads/web/msci-com/data-and-analytics/private-asset-solutions/ai-for-private-markets/msci-mcp-msci-connector-user-guide.pdf): Four MCP tools — MSCI IndexAI Insights, Private Capital Intelligence (PCI), Total Plan Manager (TPM), MSCI Real Assets Index; OAuth via mcp.msci.com / accounts.msci.com
+
+## SDKs and Code Libraries
+
+- [MSCI Python SDK on PyPI](https://pypi.org/project/msci-sdk/): Official Python SDK (msci.sdk)
+- [MSCI Python SDK docs](https://developer.msci.com/code-libraries/msci-python-sdk)
+- [Code libraries catalog](https://developer.msci.com/code-libraries): RMWS package, Snowflake notebooks, QIS tax optimization notebooks
+
+## Docs
+
+- [MSCI Developer Community](https://developer.msci.com)
+- [API catalog](https://developer.msci.com/apis)
+- [Use cases](https://developer.msci.com/use-cases)
+- [Labs](https://developer.msci.com/labs)
+- [Support](https://support.msci.com)
+- [Terms of use](https://www.msci.com/terms-of-use)
+- [Privacy pledge](https://www.msci.com/privacy-pledge)
