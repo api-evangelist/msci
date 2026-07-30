@@ -2,6 +2,18 @@ aid: msci
 url: https://raw.githubusercontent.com/api-evangelist/msci/refs/heads/main/apis.yml
 name: MSCI
 type: Index
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/msci.png
 description: >-
   MSCI is a leading provider of critical decision support tools and services for
