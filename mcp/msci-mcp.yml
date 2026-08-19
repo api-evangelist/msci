@@ -13,39 +13,37 @@ server:
     token_endpoint: https://accounts.msci.com/oauth/token
     registration_endpoint: https://mcp.msci.com/iams/v1.0/apps/spa
     issuer: https://accounts.msci.com/
-    note: MSCI credentials (same login as MSCI ONE / Private i); data is entitlement-controlled per MSCI license.
+    note: MSCI credentials (same login as MSCI ONE / Private i); data is entitlement-controlled per MSCI
+      license.
 tools:
-  - name: MSCI IndexAI Insights
-    description: >-
-      Query MSCI index performance, constituents, factor analytics (FaCS),
-      valuation ratios and fundamentals, corporate actions, sustainability and
-      climate metrics, and index methodology documentation. Example tool-call
-      indicator documented by MSCI: executeIndexGQLSchema (GraphQL-backed).
-  - name: MSCI Private Capital Intelligence (PCI)
-    description: >-
-      Benchmark private capital funds using IRR (1-20yr), TVPI, DPI, RVPI,
-      distributions, net cash flow, paid-in capital and valuation across
-      vintages, geographies, asset classes, industries, fund sizes and vehicle
-      types, drawing on the MSCI PCI database.
-  - name: Total Plan Manager (TPM)
-    description: >-
-      Access portfolio holdings, performance, transparency, liquidity and cash
-      flow data across public and private markets, including market data (FX,
-      index returns, constituents), fund transparency positions, and
-      valuations/transactions data.
-  - name: MSCI Real Assets Index (Index Intel)
-    description: >-
-      Query direct property, property fund, infrastructure and debt fund index
-      performance across global markets, including Total Return, Capital
-      Growth, Income Return and underlying fundamentals with sector,
-      geographic and asset characteristic breakdowns.
-notes: >-
-  The live tools/list endpoint is auth-gated: mcp.msci.com publishes RFC 8414
-  OAuth authorization-server metadata (saved at
-  well-known/msci-mcp-oauth-authorization-server.json) and requires MSCI
-  client credentials, so tool inputSchemas need authenticated introspection.
-  The tool list above is from the official MSCI Connector user guide (May
-  2026, "Four integrated MCP tools"). The MSCI Developer Community portal also
-  ships an MCP catalog section at developer.msci.com/developerCommunity/mcp
-  (authentication required). No public OpenAPI exists to bind a tool
-  crosswalk against.
+- name: MSCI IndexAI Insights
+  description: 'Query MSCI index performance, constituents, factor analytics (FaCS), valuation ratios
+    and fundamentals, corporate actions, sustainability and climate metrics, and index methodology documentation.
+    Example tool-call indicator documented by MSCI: executeIndexGQLSchema (GraphQL-backed).'
+- name: MSCI Private Capital Intelligence (PCI)
+  description: Benchmark private capital funds using IRR (1-20yr), TVPI, DPI, RVPI, distributions, net
+    cash flow, paid-in capital and valuation across vintages, geographies, asset classes, industries,
+    fund sizes and vehicle types, drawing on the MSCI PCI database.
+- name: Total Plan Manager (TPM)
+  description: Access portfolio holdings, performance, transparency, liquidity and cash flow data across
+    public and private markets, including market data (FX, index returns, constituents), fund transparency
+    positions, and valuations/transactions data.
+- name: MSCI Real Assets Index (Index Intel)
+  description: Query direct property, property fund, infrastructure and debt fund index performance across
+    global markets, including Total Return, Capital Growth, Income Return and underlying fundamentals
+    with sector, geographic and asset characteristic breakdowns.
+notes: 'The live tools/list endpoint is auth-gated: mcp.msci.com publishes RFC 8414 OAuth authorization-server
+  metadata (saved at well-known/msci-mcp-oauth-authorization-server.json) and requires MSCI client credentials,
+  so tool inputSchemas need authenticated introspection. The tool list above is from the official MSCI
+  Connector user guide (May 2026, "Four integrated MCP tools"). The MSCI Developer Community portal also
+  ships an MCP catalog section at developer.msci.com/developerCommunity/mcp (authentication required).
+  No public OpenAPI exists to bind a tool crosswalk against.'
+deployment:
+  mode: none
+  endpoint: https://mcp.msci.com
+  verified: probed
+  probe: dead
+  note: the endpoint this manifest claimed did not answer; recorded as none rather than deleted so the
+    claim stays auditable
+  checked: '2026-08-12'
+  source: catalog MCP census
