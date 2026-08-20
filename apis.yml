@@ -34,6 +34,15 @@ tags:
   - ESG
   - Climate
   - Risk Analytics
+  - Real-Estate
+  - Private Assets
+  - Investing
+tags_raw:
+  - Financial Data
+  - Indexes
+  - ESG
+  - Climate
+  - Risk Analytics
   - Real Estate
   - Private Assets
   - Investing
@@ -62,6 +71,9 @@ apis:
     humanURL: https://developer.msci.com/apis/index-rt-api-dev-index-rt-factor-api-v1-0
     baseURL: https://api2.msci.com
     tags:
+      - Indexes
+      - Real-Time
+    tags_raw:
       - Indexes
       - Real Time
     properties:
@@ -138,6 +150,9 @@ apis:
     baseURL: https://api2.msci.com
     tags:
       - Optimization
+      - Portfolio
+    tags_raw:
+      - Optimization
       - Portfolios
     properties:
       - type: Documentation
@@ -151,6 +166,9 @@ apis:
     humanURL: https://developer.msci.com/apis/real-estate-performance-risk-data-api
     baseURL: https://api2.msci.com
     tags:
+      - Real-Estate
+      - Performance
+    tags_raw:
       - Real Estate
       - Performance
     properties:
