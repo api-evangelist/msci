@@ -41,7 +41,7 @@ modified: '2026-07-22'
 specificationVersion: '0.23'
 tags:
   - Financial Data
-  - Indexes
+  - Index
   - ESG
   - Climate
   - Risk Analytics
@@ -69,6 +69,10 @@ apis:
     humanURL: https://developer.msci.com/apis/index-api
     baseURL: https://api.msci.com/index
     tags:
+      - Index
+      - Performance
+      - Constituents
+    tags_raw:
       - Indexes
       - Performance
       - Constituents
@@ -82,7 +86,7 @@ apis:
     humanURL: https://developer.msci.com/apis/index-rt-api-dev-index-rt-factor-api-v1-0
     baseURL: https://api2.msci.com
     tags:
-      - Indexes
+      - Index
       - Real-Time
     tags_raw:
       - Indexes
