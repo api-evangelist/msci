@@ -45,7 +45,7 @@ tags:
   - ESG
   - Climate
   - Risk Analytics
-  - Real-Estate
+  - Real Estate
   - Private Assets
   - Investing
 tags_raw:
@@ -57,6 +57,7 @@ tags_raw:
   - Real Estate
   - Private Assets
   - Investing
+  - Real-Estate
 maintainers:
   - FN: MSCI Client Service
     email: ClientService@msci.com
@@ -139,6 +140,9 @@ apis:
     humanURL: https://developer.msci.com/apis/risk-analytics
     baseURL: https://api2.msci.com
     tags:
+      - Risk Management
+      - Analytics
+    tags_raw:
       - Risk
       - Analytics
     properties:
@@ -181,11 +185,12 @@ apis:
     humanURL: https://developer.msci.com/apis/real-estate-performance-risk-data-api
     baseURL: https://api2.msci.com
     tags:
-      - Real-Estate
+      - Real Estate
       - Performance
     tags_raw:
       - Real Estate
       - Performance
+      - Real-Estate
     properties:
       - type: Documentation
         url: https://developer.msci.com/apis/real-estate-performance-risk-data-api
