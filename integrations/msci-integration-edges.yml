@@ -28,7 +28,29 @@ edges:
       home_member_state: UNITED KINGDOM
   detected_by: sweep-capital-markets.py
   first_seen: '2026-10-15'
+- partner_name: Microsoft Teams (own)
+  partner: microsoft-teams
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://appsource.microsoft.com/en-us/product/office/WA200011386
+  mirror_of: microsoft-teams/integrations/microsoft-teams-integration-edges.yml
+  apps:
+  - MSCI
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Microsoft Teams app
+  publisher_verified:
+  - Microsoft 365 Publisher Attestation
 generated: '2026-10-15'
 method: searched
 checked:
 - https://registers.esma.europa.eu/solr/esma_registers_bench_entities/select
+- microsoft-teams/integrations/microsoft-teams-integration-edges.yml
+source:
+- microsoft-teams/integrations/microsoft-teams-integration-edges.yml
