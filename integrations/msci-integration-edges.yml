@@ -1,33 +1,4 @@
 edges:
-- partner_name: ESMA (EU)
-  partner: null
-  type: contract
-  channel: regulator-register
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://registers.esma.europa.eu/solr/esma_registers_bench_entities/select
-  source: esma
-  contract_reference:
-    register: 'ESMA Benchmarks Regulation register: administrators (esma_registers_bench_entities)'
-    spec_file: null
-    registered_name: MSCI DEUTSCHLAND GmbH
-    register_id: DE40035391
-    role: benchmark administrator (Authorisation under Art. 34)
-    competent_authority: European Securities and Markets Authority - ESMA
-    home_member_state: GERMANY
-    authorised: null
-    matched_domain: msci.com
-    matched_by: domain:msci.com
-    detected_by: sweep-capital-markets.py
-    detected: '2026-10-15'
-    other_registrations:
-    - registered_name: MSCI Limited
-      register_id: DE40035606
-      role: benchmark administrator (Endorsement under Art. 33)
-      competent_authority: Financial Conduct Authority (FCA) - GBFC
-      home_member_state: UNITED KINGDOM
-  detected_by: sweep-capital-markets.py
-  first_seen: '2026-10-15'
 - partner_name: Microsoft Teams (own)
   partner: microsoft-teams
   partner_match: mirror
@@ -77,6 +48,62 @@ edges:
     detected: '2026-10-18'
   detected_by: sweep-official-sdks.py
   first_seen: '2026-10-18'
+- partner_name: ESMA (EU)
+  partner: null
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registers.esma.europa.eu/solr/esma_registers_bench_entities/select
+  source: esma
+  contract_reference:
+    register: 'ESMA Benchmarks Regulation register: administrators (esma_registers_bench_entities)'
+    spec_file: null
+    registered_name: MSCI DEUTSCHLAND GmbH
+    register_id: DE40035391
+    role: benchmark administrator (Authorisation under Art. 34)
+    competent_authority: European Securities and Markets Authority - ESMA
+    home_member_state: GERMANY
+    authorised: null
+    matched_domain: msci.com
+    matched_by: domain:msci.com
+    detected_by: sweep-capital-markets.py
+    detected: '2026-10-19'
+    other_registrations:
+    - registered_name: MSCI Limited
+      register_id: DE40035606
+      role: benchmark administrator (Endorsement under Art. 33)
+      competent_authority: Financial Conduct Authority (FCA) - GBFC
+      home_member_state: UNITED KINGDOM
+  detected_by: sweep-capital-markets.py
+  first_seen: '2026-10-19'
+- partner_name: Snowflake Marketplace
+  partner: snowflake
+  partner_match: aggregator
+  type: marketplace
+  marketplace: snowflake-marketplace
+  channel: distribution
+  relationship: distribution-channel
+  direction: third-party
+  evidence: https://app.snowflake.com/marketplace/providers/GZ1M6ZQE23L
+  category: data product listing
+  contract_reference:
+    register: Snowflake Marketplace providers (app.snowflake.com/marketplace/providers, rendered; names only, Wikidata
+      P856 identity step)
+    spec_file: null
+    role: data-marketplace-seller
+    registered_name: MSCI
+    matched_domain: msci.com
+    matched_by: domain
+    listings: 327
+    sample_listings: []
+    signal_note: 'participation: the provider lists data products on this marketplace; counts are context'
+    detected_by: sweep-data-marketplaces.py
+    detected: '2026-10-20'
+    identity_source: wikidata
+    identity_note: wikidata P856 msci.com for 'MSCI' (labelled identity step)
+  detected_by: sweep-data-marketplaces.py
+  detected: '2026-10-20'
 generated: '2026-10-15'
 method: searched
 checked:
@@ -89,5 +116,6 @@ checked:
 - https://repo1.maven.org/maven2
 - https://rubygems.org/api/v1
 - microsoft-teams/integrations/microsoft-teams-integration-edges.yml
+- https://app.snowflake.com/marketplace/providers
 source:
 - microsoft-teams/integrations/microsoft-teams-integration-edges.yml
